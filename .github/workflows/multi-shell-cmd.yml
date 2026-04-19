@@ -1,4 +1,4 @@
-name: Hello World
+name: Multi-shell-cmds
 
 on: workflow_dispatch
 
