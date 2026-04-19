@@ -1,0 +1,22 @@
+name: Hello World push pull req
+on: 
+push:
+  branches:
+    - main
+    - develop
+    - feature/*
+    - hotfix/*
+    - release/*
+    - pr-demo/*
+pull_request:
+  branches:
+  - main
+  - develop
+  - feature/*
+  - hotfix/*
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Build step
+      run: echo "A Build stage"
