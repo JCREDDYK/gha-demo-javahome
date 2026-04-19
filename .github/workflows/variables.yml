@@ -1,9 +1,21 @@
-name: Hello World push-req
-on: push
+name: Hello World push&pull-req
+on: 
+push:
+  branches:
+    - main
+    - develop
+    - feature/*
+    - hotfix/*
+    - release/*
+    - pr-demo/*
+pull_request:
+branches:
+  - main
+  - develop
+  - feature/*
 jobs:
   build:
    runs-on: ubuntu-latest
    steps:
     - name: Build step
       run: echo "Hello ${{variables.MY_NAME}}"
-      
