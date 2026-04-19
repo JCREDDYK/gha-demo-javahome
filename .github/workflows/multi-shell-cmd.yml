@@ -3,7 +3,7 @@ name: Multi-shell-cmds
 on: workflow_dispatch
 
 jobs:
-  hello:
+  multi-cmds:
     runs-on: ubuntu-latest
 
     steps:
