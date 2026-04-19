@@ -7,4 +7,4 @@ jobs:
   runs-on: ubuntu-latest
  steps:
    - name: Hello steps
-    run: echo"Welcome to GitHub Actions First Project"
+     run: echo"Welcome to GitHub Actions First Project"
