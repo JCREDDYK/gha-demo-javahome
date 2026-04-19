@@ -1,0 +1,9 @@
+name: Hello World push-req
+on: push
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Build step
+      run: echo "Hello ${{variables.MY_NAME}}"
+      
