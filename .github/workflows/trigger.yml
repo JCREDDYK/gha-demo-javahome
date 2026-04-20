@@ -1,10 +1,10 @@
-name: Hello World push-req
+name: GitHub Actions Demo
 on: push
 jobs:
-  build:
-   runs-on: ubuntu-latest
-   steps:
-    - name: Build step
-      run: echo "Hello ${{secrets.MY_DOCKER_PWD}}"
-  
-     
+  action-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Print index.html
+        run: cat index.html  
