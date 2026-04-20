@@ -1,15 +1,14 @@
 name: Env at workflow level
-on: workflow_dispatch
+'on': workflow_dispatch
 env:
-  APP_ENV: "Dev"
+  APP_ENV: Dev
 jobs:
   env_demo:
     env:
-      APP_ENV: "TEST"
+      APP_ENV: TEST
     runs-on: ubuntu-latest
-    steps:
+  steps:
       - name: Show Env
-        env:
-        APP_ENV: "PROD"
-       run: echo "App is connecting to $APP_ENV"
-  
+        env: null
+        APP_ENV: PROD
+    run: echo "App is connecting to $APP_ENV"
