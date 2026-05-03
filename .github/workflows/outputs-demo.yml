@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Build step
         id: setp1
-        run: echo "version=1.0.0" >> $GITHUB_OUTPUT
+        run: echo "version=1.0.2" >> $GITHUB_OUTPUT
   deploy:
     needs: build
     runs-on: ubuntu-Latest
