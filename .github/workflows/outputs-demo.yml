@@ -1,0 +1,19 @@
+name: Outputs Demo
+on:
+  push:
+jobs:
+  build:
+    outputs:
+      version: ${{steps.setp1.outputs.version }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        id: setp1
+        run: echo "version=1.0.0" >> $GITHUB_OUTPUT
+  deploy:
+    needs: build
+    runs-on: ubuntu-Latest
+    steps:
+      - name: Deploy step
+        run: echo "Deploying version ${{ needs.build.outputs.version }}"        
+          
