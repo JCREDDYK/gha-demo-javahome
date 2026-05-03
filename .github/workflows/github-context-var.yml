@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: Use contex variables
         run: |
-          echo "The workflow is triggered by ${{ github.actor }}"
-          echo "The repository is ${{ github.repository }}"
-          echo "The branch is ${{ github.ref }}"
+          echo "The workflow is triggered by ${{github.actor }}"
+          echo "The repository is ${{github.repository }}"
+          echo "The branch is ${{github.ref }}"
 
       - name: print all variables undr github context
-        run: echo "${ { toJson(github) } }"
+        run: echo "${{toJson(github) }}"
